@@ -1,0 +1,11 @@
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+} 
+
+body{
+    max-width: 1200px;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
