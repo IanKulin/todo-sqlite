@@ -1,14 +1,24 @@
-const http = require('http');
+const express = require('express');
+const app = express();
  
 const hostname = '127.0.0.1';
 const port = 3000;
- 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
+
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
+
+
+app.get('/', (req, res) => {
+    res.render('index', { title: 'Index'});
+  });
+
+
+//404 handling
+app.use(function (req, res, next) {
+  res.status(404).render('404', { title: '404', url: req.url });
 });
- 
-server.listen(port, hostname, () => {
+
+
+app.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
