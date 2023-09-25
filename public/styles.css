@@ -9,3 +9,51 @@ body{
     margin: 0;
 }
 
+
+nav {
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    overflow: hidden;
+    background-color: #EEE;
+}
+
+nav li {
+    display: inline-block;
+    padding: 0;
+}
+
+nav a {
+    display: inline;
+    color: #333;
+    text-align: center;
+    padding: 17px 8px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: #ddd;
+    color: black;
+}
+
+nav ul {
+    padding-inline-start: 4px;
+}
+
+
+/* push content down below the nav bar */
+.content {
+    padding: 50px 10px 10px 10px;
+}
+
+
+footer {
+    width:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    color: #757171;
+    text-align: center;
+    margin: 80px auto 20px;
+    background-color: #EEE;
+}
